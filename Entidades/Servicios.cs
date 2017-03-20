@@ -7,5 +7,7 @@ namespace Entidades
 {
     public class Servicios
     {
+
+
     }
 }

@@ -31,10 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeTiposDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rsgistrosUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,10 +57,19 @@
             // registrosToolStripMenuItem
             // 
             this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrosClientesToolStripMenuItem});
+            this.registrosClientesToolStripMenuItem,
+            this.registroDeTiposDeUsuariosToolStripMenuItem,
+            this.rsgistrosUsuariosToolStripMenuItem});
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.registrosToolStripMenuItem.Text = "Registros";
+            // 
+            // registrosClientesToolStripMenuItem
+            // 
+            this.registrosClientesToolStripMenuItem.Name = "registrosClientesToolStripMenuItem";
+            this.registrosClientesToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.registrosClientesToolStripMenuItem.Text = "Registros Clientes";
+            this.registrosClientesToolStripMenuItem.Click += new System.EventHandler(this.registrosClientesToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
@@ -78,12 +89,18 @@
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
-            // registrosClientesToolStripMenuItem
+            // registroDeTiposDeUsuariosToolStripMenuItem
             // 
-            this.registrosClientesToolStripMenuItem.Name = "registrosClientesToolStripMenuItem";
-            this.registrosClientesToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
-            this.registrosClientesToolStripMenuItem.Text = "Registros Clientes";
-            this.registrosClientesToolStripMenuItem.Click += new System.EventHandler(this.registrosClientesToolStripMenuItem_Click);
+            this.registroDeTiposDeUsuariosToolStripMenuItem.Name = "registroDeTiposDeUsuariosToolStripMenuItem";
+            this.registroDeTiposDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.registroDeTiposDeUsuariosToolStripMenuItem.Text = "Registros Tipos de Usuarios";
+            this.registroDeTiposDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.registroDeTiposDeUsuariosToolStripMenuItem_Click);
+            // 
+            // rsgistrosUsuariosToolStripMenuItem
+            // 
+            this.rsgistrosUsuariosToolStripMenuItem.Name = "rsgistrosUsuariosToolStripMenuItem";
+            this.rsgistrosUsuariosToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.rsgistrosUsuariosToolStripMenuItem.Text = "Rsgistros Usuarios";
             // 
             // FormularioPrincipal
             // 
@@ -111,6 +128,8 @@
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrosClientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDeTiposDeUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rsgistrosUsuariosToolStripMenuItem;
     }
 }
 

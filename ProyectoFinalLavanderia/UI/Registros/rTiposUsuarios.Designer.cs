@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TipoUsuarioIdtextBox = new System.Windows.Forms.TextBox();
+            this.TipoUsuariotextBox = new System.Windows.Forms.TextBox();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.ValidarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,59 +61,67 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Tipo:";
             // 
-            // textBox1
+            // TipoUsuarioIdtextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(173, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 22);
-            this.textBox1.TabIndex = 2;
+            this.TipoUsuarioIdtextBox.Location = new System.Drawing.Point(182, 57);
+            this.TipoUsuarioIdtextBox.Name = "TipoUsuarioIdtextBox";
+            this.TipoUsuarioIdtextBox.Size = new System.Drawing.Size(38, 22);
+            this.TipoUsuarioIdtextBox.TabIndex = 0;
             // 
-            // textBox2
+            // TipoUsuariotextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(173, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 22);
-            this.textBox2.TabIndex = 2;
+            this.TipoUsuariotextBox.Location = new System.Drawing.Point(182, 101);
+            this.TipoUsuariotextBox.Name = "TipoUsuariotextBox";
+            this.TipoUsuariotextBox.Size = new System.Drawing.Size(233, 22);
+            this.TipoUsuariotextBox.TabIndex = 1;
             // 
             // Nuevobutton
             // 
             this.Nuevobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nuevobutton.Location = new System.Drawing.Point(69, 174);
+            this.Nuevobutton.Location = new System.Drawing.Point(69, 173);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(116, 36);
+            this.Nuevobutton.Size = new System.Drawing.Size(116, 39);
             this.Nuevobutton.TabIndex = 3;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Guardarbutton
             // 
             this.Guardarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Guardarbutton.Location = new System.Drawing.Point(212, 174);
+            this.Guardarbutton.Location = new System.Drawing.Point(214, 173);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(116, 36);
-            this.Guardarbutton.TabIndex = 4;
+            this.Guardarbutton.Size = new System.Drawing.Size(116, 39);
+            this.Guardarbutton.TabIndex = 2;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Eliminarbutton
             // 
             this.Eliminarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Eliminarbutton.Location = new System.Drawing.Point(359, 174);
+            this.Eliminarbutton.Location = new System.Drawing.Point(359, 173);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(116, 36);
-            this.Eliminarbutton.TabIndex = 5;
+            this.Eliminarbutton.Size = new System.Drawing.Size(116, 39);
+            this.Eliminarbutton.TabIndex = 4;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Buscarbutton
             // 
             this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarbutton.Location = new System.Drawing.Point(441, 36);
+            this.Buscarbutton.Location = new System.Drawing.Point(359, 40);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(116, 34);
-            this.Buscarbutton.TabIndex = 6;
+            this.Buscarbutton.Size = new System.Drawing.Size(116, 39);
+            this.Buscarbutton.TabIndex = 5;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            // 
+            // ValidarerrorProvider
+            // 
+            this.ValidarerrorProvider.ContainerControl = this;
             // 
             // rTiposUsuarios
             // 
@@ -121,12 +132,13 @@
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TipoUsuariotextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TipoUsuarioIdtextBox);
             this.Name = "rTiposUsuarios";
             this.Text = "Tipos Usuarios";
+            ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,11 +148,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TipoUsuarioIdtextBox;
+        private System.Windows.Forms.TextBox TipoUsuariotextBox;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Buscarbutton;
+        private System.Windows.Forms.ErrorProvider ValidarerrorProvider;
     }
 }

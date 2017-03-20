@@ -21,5 +21,11 @@ namespace ProyectoFinalLavanderia
             UI.Registros.rClientes rc = new UI.Registros.rClientes();
             rc.Show();
         }
+
+        private void registroDeTiposDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Registros.rTiposUsuarios tu = new UI.Registros.rTiposUsuarios();
+            tu.Show();
+        }
     }
 }

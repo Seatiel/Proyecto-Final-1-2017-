@@ -1,6 +1,6 @@
 ﻿namespace ProyectoFinalLavanderia.UI.Consultas
 {
-    partial class cClientes
+    partial class cServicios
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // cClientes
+            // cServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 454);
-            this.Name = "cClientes";
-            this.Text = "cClientes";
+            this.ClientSize = new System.Drawing.Size(606, 438);
+            this.Name = "cServicios";
+            this.Text = "cServicios";
             this.ResumeLayout(false);
 
         }
