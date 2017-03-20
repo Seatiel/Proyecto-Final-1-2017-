@@ -43,10 +43,20 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.RegistrosgroupBox = new System.Windows.Forms.GroupBox();
+            this.RUsuarioscheckBox = new System.Windows.Forms.CheckBox();
+            this.RTiposUsuarioscheckBox = new System.Windows.Forms.CheckBox();
+            this.RServicioscheckBox = new System.Windows.Forms.CheckBox();
+            this.RFacturascheckBox = new System.Windows.Forms.CheckBox();
+            this.RClientescheckBox = new System.Windows.Forms.CheckBox();
             this.ConsultasgroupBox = new System.Windows.Forms.GroupBox();
+            this.CServicioscheckBox = new System.Windows.Forms.CheckBox();
+            this.CUsuarioscheckBox = new System.Windows.Forms.CheckBox();
+            this.CClientescheckBox = new System.Windows.Forms.CheckBox();
             this.PermisosgroupBox = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.TipoUsuariocomboBox = new System.Windows.Forms.ComboBox();
+            this.RegistrosgroupBox.SuspendLayout();
+            this.ConsultasgroupBox.SuspendLayout();
             this.PermisosgroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,35 +112,35 @@
             // 
             // UsuarioIdtextBox
             // 
-            this.UsuarioIdtextBox.Location = new System.Drawing.Point(211, 36);
+            this.UsuarioIdtextBox.Location = new System.Drawing.Point(224, 36);
             this.UsuarioIdtextBox.Name = "UsuarioIdtextBox";
             this.UsuarioIdtextBox.Size = new System.Drawing.Size(35, 22);
             this.UsuarioIdtextBox.TabIndex = 5;
             // 
             // NombreUsuariotextBox
             // 
-            this.NombreUsuariotextBox.Location = new System.Drawing.Point(211, 76);
+            this.NombreUsuariotextBox.Location = new System.Drawing.Point(224, 76);
             this.NombreUsuariotextBox.Name = "NombreUsuariotextBox";
             this.NombreUsuariotextBox.Size = new System.Drawing.Size(212, 22);
             this.NombreUsuariotextBox.TabIndex = 6;
             // 
             // NombrestextBox
             // 
-            this.NombrestextBox.Location = new System.Drawing.Point(211, 117);
+            this.NombrestextBox.Location = new System.Drawing.Point(224, 117);
             this.NombrestextBox.Name = "NombrestextBox";
             this.NombrestextBox.Size = new System.Drawing.Size(212, 22);
             this.NombrestextBox.TabIndex = 7;
             // 
             // ClavetextBox
             // 
-            this.ClavetextBox.Location = new System.Drawing.Point(211, 158);
+            this.ClavetextBox.Location = new System.Drawing.Point(224, 158);
             this.ClavetextBox.Name = "ClavetextBox";
             this.ClavetextBox.Size = new System.Drawing.Size(212, 22);
             this.ClavetextBox.TabIndex = 8;
             // 
             // ConfirmarClavetextBox
             // 
-            this.ConfirmarClavetextBox.Location = new System.Drawing.Point(211, 199);
+            this.ConfirmarClavetextBox.Location = new System.Drawing.Point(224, 199);
             this.ConfirmarClavetextBox.Name = "ConfirmarClavetextBox";
             this.ConfirmarClavetextBox.Size = new System.Drawing.Size(212, 22);
             this.ConfirmarClavetextBox.TabIndex = 9;
@@ -144,6 +154,7 @@
             this.Nuevobutton.TabIndex = 10;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Guardarbutton
             // 
@@ -154,6 +165,7 @@
             this.Guardarbutton.TabIndex = 11;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Eliminarbutton
             // 
@@ -164,34 +176,124 @@
             this.Eliminarbutton.TabIndex = 12;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Buscarbutton
             // 
             this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarbutton.Location = new System.Drawing.Point(392, 20);
+            this.Buscarbutton.Location = new System.Drawing.Point(405, 20);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(126, 38);
             this.Buscarbutton.TabIndex = 13;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // RegistrosgroupBox
             // 
-            this.RegistrosgroupBox.Location = new System.Drawing.Point(6, 34);
+            this.RegistrosgroupBox.Controls.Add(this.RUsuarioscheckBox);
+            this.RegistrosgroupBox.Controls.Add(this.RTiposUsuarioscheckBox);
+            this.RegistrosgroupBox.Controls.Add(this.RServicioscheckBox);
+            this.RegistrosgroupBox.Controls.Add(this.RFacturascheckBox);
+            this.RegistrosgroupBox.Controls.Add(this.RClientescheckBox);
+            this.RegistrosgroupBox.Location = new System.Drawing.Point(6, 43);
             this.RegistrosgroupBox.Name = "RegistrosgroupBox";
-            this.RegistrosgroupBox.Size = new System.Drawing.Size(275, 176);
+            this.RegistrosgroupBox.Size = new System.Drawing.Size(305, 176);
             this.RegistrosgroupBox.TabIndex = 14;
             this.RegistrosgroupBox.TabStop = false;
             this.RegistrosgroupBox.Text = "Registros";
             // 
+            // RUsuarioscheckBox
+            // 
+            this.RUsuarioscheckBox.AutoSize = true;
+            this.RUsuarioscheckBox.Location = new System.Drawing.Point(14, 139);
+            this.RUsuarioscheckBox.Name = "RUsuarioscheckBox";
+            this.RUsuarioscheckBox.Size = new System.Drawing.Size(98, 22);
+            this.RUsuarioscheckBox.TabIndex = 4;
+            this.RUsuarioscheckBox.Text = "Usuarios";
+            this.RUsuarioscheckBox.UseVisualStyleBackColor = true;
+            // 
+            // RTiposUsuarioscheckBox
+            // 
+            this.RTiposUsuarioscheckBox.AutoSize = true;
+            this.RTiposUsuarioscheckBox.Location = new System.Drawing.Point(14, 114);
+            this.RTiposUsuarioscheckBox.Name = "RTiposUsuarioscheckBox";
+            this.RTiposUsuarioscheckBox.Size = new System.Drawing.Size(145, 22);
+            this.RTiposUsuarioscheckBox.TabIndex = 3;
+            this.RTiposUsuarioscheckBox.Text = "Tipos Usuarios";
+            this.RTiposUsuarioscheckBox.UseVisualStyleBackColor = true;
+            // 
+            // RServicioscheckBox
+            // 
+            this.RServicioscheckBox.AutoSize = true;
+            this.RServicioscheckBox.Location = new System.Drawing.Point(14, 89);
+            this.RServicioscheckBox.Name = "RServicioscheckBox";
+            this.RServicioscheckBox.Size = new System.Drawing.Size(100, 22);
+            this.RServicioscheckBox.TabIndex = 2;
+            this.RServicioscheckBox.Text = "Servicios";
+            this.RServicioscheckBox.UseVisualStyleBackColor = true;
+            // 
+            // RFacturascheckBox
+            // 
+            this.RFacturascheckBox.AutoSize = true;
+            this.RFacturascheckBox.Location = new System.Drawing.Point(14, 64);
+            this.RFacturascheckBox.Name = "RFacturascheckBox";
+            this.RFacturascheckBox.Size = new System.Drawing.Size(96, 22);
+            this.RFacturascheckBox.TabIndex = 1;
+            this.RFacturascheckBox.Text = "Facturas";
+            this.RFacturascheckBox.UseVisualStyleBackColor = true;
+            // 
+            // RClientescheckBox
+            // 
+            this.RClientescheckBox.AutoSize = true;
+            this.RClientescheckBox.Location = new System.Drawing.Point(14, 39);
+            this.RClientescheckBox.Name = "RClientescheckBox";
+            this.RClientescheckBox.Size = new System.Drawing.Size(91, 22);
+            this.RClientescheckBox.TabIndex = 0;
+            this.RClientescheckBox.Text = "Clientes";
+            this.RClientescheckBox.UseVisualStyleBackColor = true;
+            // 
             // ConsultasgroupBox
             // 
-            this.ConsultasgroupBox.Location = new System.Drawing.Point(317, 34);
+            this.ConsultasgroupBox.Controls.Add(this.CServicioscheckBox);
+            this.ConsultasgroupBox.Controls.Add(this.CUsuarioscheckBox);
+            this.ConsultasgroupBox.Controls.Add(this.CClientescheckBox);
+            this.ConsultasgroupBox.Location = new System.Drawing.Point(319, 43);
             this.ConsultasgroupBox.Name = "ConsultasgroupBox";
-            this.ConsultasgroupBox.Size = new System.Drawing.Size(289, 176);
+            this.ConsultasgroupBox.Size = new System.Drawing.Size(305, 176);
             this.ConsultasgroupBox.TabIndex = 15;
             this.ConsultasgroupBox.TabStop = false;
             this.ConsultasgroupBox.Text = "Consultas";
+            // 
+            // CServicioscheckBox
+            // 
+            this.CServicioscheckBox.AutoSize = true;
+            this.CServicioscheckBox.Location = new System.Drawing.Point(6, 65);
+            this.CServicioscheckBox.Name = "CServicioscheckBox";
+            this.CServicioscheckBox.Size = new System.Drawing.Size(100, 22);
+            this.CServicioscheckBox.TabIndex = 7;
+            this.CServicioscheckBox.Text = "Servicios";
+            this.CServicioscheckBox.UseVisualStyleBackColor = true;
+            // 
+            // CUsuarioscheckBox
+            // 
+            this.CUsuarioscheckBox.AutoSize = true;
+            this.CUsuarioscheckBox.Location = new System.Drawing.Point(6, 91);
+            this.CUsuarioscheckBox.Name = "CUsuarioscheckBox";
+            this.CUsuarioscheckBox.Size = new System.Drawing.Size(98, 22);
+            this.CUsuarioscheckBox.TabIndex = 6;
+            this.CUsuarioscheckBox.Text = "Usuarios";
+            this.CUsuarioscheckBox.UseVisualStyleBackColor = true;
+            // 
+            // CClientescheckBox
+            // 
+            this.CClientescheckBox.AutoSize = true;
+            this.CClientescheckBox.Location = new System.Drawing.Point(6, 39);
+            this.CClientescheckBox.Name = "CClientescheckBox";
+            this.CClientescheckBox.Size = new System.Drawing.Size(91, 22);
+            this.CClientescheckBox.TabIndex = 5;
+            this.CClientescheckBox.Text = "Clientes";
+            this.CClientescheckBox.UseVisualStyleBackColor = true;
             // 
             // PermisosgroupBox
             // 
@@ -200,7 +302,7 @@
             this.PermisosgroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PermisosgroupBox.Location = new System.Drawing.Point(12, 282);
             this.PermisosgroupBox.Name = "PermisosgroupBox";
-            this.PermisosgroupBox.Size = new System.Drawing.Size(622, 225);
+            this.PermisosgroupBox.Size = new System.Drawing.Size(630, 225);
             this.PermisosgroupBox.TabIndex = 16;
             this.PermisosgroupBox.TabStop = false;
             this.PermisosgroupBox.Text = "Permisos";
@@ -215,20 +317,20 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "Tipo de Usuario:";
             // 
-            // comboBox1
+            // TipoUsuariocomboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(211, 237);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(212, 24);
-            this.comboBox1.TabIndex = 18;
+            this.TipoUsuariocomboBox.FormattingEnabled = true;
+            this.TipoUsuariocomboBox.Location = new System.Drawing.Point(224, 237);
+            this.TipoUsuariocomboBox.Name = "TipoUsuariocomboBox";
+            this.TipoUsuariocomboBox.Size = new System.Drawing.Size(212, 24);
+            this.TipoUsuariocomboBox.TabIndex = 18;
             // 
             // rUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 578);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.TipoUsuariocomboBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.PermisosgroupBox);
             this.Controls.Add(this.Buscarbutton);
@@ -247,7 +349,10 @@
             this.Controls.Add(this.label1);
             this.Name = "rUsuarios";
             this.Text = "rUsuarios";
-            this.Load += new System.EventHandler(this.rUsuarios_Load);
+            this.RegistrosgroupBox.ResumeLayout(false);
+            this.RegistrosgroupBox.PerformLayout();
+            this.ConsultasgroupBox.ResumeLayout(false);
+            this.ConsultasgroupBox.PerformLayout();
             this.PermisosgroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -274,6 +379,14 @@
         private System.Windows.Forms.GroupBox ConsultasgroupBox;
         private System.Windows.Forms.GroupBox PermisosgroupBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox TipoUsuariocomboBox;
+        private System.Windows.Forms.CheckBox RUsuarioscheckBox;
+        private System.Windows.Forms.CheckBox RTiposUsuarioscheckBox;
+        private System.Windows.Forms.CheckBox RServicioscheckBox;
+        private System.Windows.Forms.CheckBox RFacturascheckBox;
+        private System.Windows.Forms.CheckBox RClientescheckBox;
+        private System.Windows.Forms.CheckBox CServicioscheckBox;
+        private System.Windows.Forms.CheckBox CUsuarioscheckBox;
+        private System.Windows.Forms.CheckBox CClientescheckBox;
     }
 }
