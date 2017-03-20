@@ -1,6 +1,6 @@
-﻿namespace ProyectoFinalLavanderia
+﻿namespace ProyectoFinalLavanderia.UI.Registros
 {
-    partial class Form1
+    partial class rFactura
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // rFactura
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(540, 409);
+            this.Name = "rFactura";
+            this.Text = "rFactura";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-
