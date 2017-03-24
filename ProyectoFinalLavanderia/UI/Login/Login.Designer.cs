@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.UsuariotextBox = new System.Windows.Forms.TextBox();
+            this.NombreUsuariotextBox = new System.Windows.Forms.TextBox();
             this.ClavetextBox = new System.Windows.Forms.TextBox();
             this.Loginbutton = new System.Windows.Forms.Button();
             this.Cancelbutton = new System.Windows.Forms.Button();
@@ -59,17 +59,17 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Password:";
             // 
-            // UsuariotextBox
+            // NombreUsuariotextBox
             // 
-            this.UsuariotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsuariotextBox.Location = new System.Drawing.Point(120, 112);
-            this.UsuariotextBox.Name = "UsuariotextBox";
-            this.UsuariotextBox.Size = new System.Drawing.Size(273, 24);
-            this.UsuariotextBox.TabIndex = 2;
+            this.NombreUsuariotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreUsuariotextBox.Location = new System.Drawing.Point(120, 112);
+            this.NombreUsuariotextBox.Name = "NombreUsuariotextBox";
+            this.NombreUsuariotextBox.Size = new System.Drawing.Size(273, 24);
+            this.NombreUsuariotextBox.TabIndex = 2;
             // 
             // ClavetextBox
             // 
-            this.ClavetextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClavetextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClavetextBox.Location = new System.Drawing.Point(120, 151);
             this.ClavetextBox.Name = "ClavetextBox";
             this.ClavetextBox.Size = new System.Drawing.Size(273, 24);
@@ -82,24 +82,26 @@
             this.Loginbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Loginbutton.Location = new System.Drawing.Point(82, 216);
             this.Loginbutton.Name = "Loginbutton";
-            this.Loginbutton.Size = new System.Drawing.Size(113, 52);
+            this.Loginbutton.Size = new System.Drawing.Size(126, 52);
             this.Loginbutton.TabIndex = 4;
             this.Loginbutton.Text = "Log-in";
             this.Loginbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Loginbutton.UseVisualStyleBackColor = true;
+            this.Loginbutton.Click += new System.EventHandler(this.Loginbutton_Click);
             // 
             // Cancelbutton
             // 
             this.Cancelbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancelbutton.Image = ((System.Drawing.Image)(resources.GetObject("Cancelbutton.Image")));
             this.Cancelbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cancelbutton.Location = new System.Drawing.Point(321, 216);
+            this.Cancelbutton.Location = new System.Drawing.Point(305, 216);
             this.Cancelbutton.Name = "Cancelbutton";
-            this.Cancelbutton.Size = new System.Drawing.Size(113, 52);
+            this.Cancelbutton.Size = new System.Drawing.Size(126, 52);
             this.Cancelbutton.TabIndex = 5;
             this.Cancelbutton.Text = "Cancel";
             this.Cancelbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Cancelbutton.UseVisualStyleBackColor = true;
+            this.Cancelbutton.Click += new System.EventHandler(this.Cancelbutton_Click);
             // 
             // pictureBox
             // 
@@ -120,10 +122,12 @@
             this.Controls.Add(this.Cancelbutton);
             this.Controls.Add(this.Loginbutton);
             this.Controls.Add(this.ClavetextBox);
-            this.Controls.Add(this.UsuariotextBox);
+            this.Controls.Add(this.NombreUsuariotextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -135,7 +139,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox UsuariotextBox;
+        private System.Windows.Forms.TextBox NombreUsuariotextBox;
         private System.Windows.Forms.TextBox ClavetextBox;
         private System.Windows.Forms.Button Loginbutton;
         private System.Windows.Forms.Button Cancelbutton;

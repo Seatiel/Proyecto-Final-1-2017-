@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rUsuarios));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,9 +57,12 @@
             this.PermisosgroupBox = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TipoUsuariocomboBox = new System.Windows.Forms.ComboBox();
+            this.ValidarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.TipoUsuariobutton = new System.Windows.Forms.Button();
             this.RegistrosgroupBox.SuspendLayout();
             this.ConsultasgroupBox.SuspendLayout();
             this.PermisosgroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -325,11 +330,27 @@
             this.TipoUsuariocomboBox.Size = new System.Drawing.Size(212, 24);
             this.TipoUsuariocomboBox.TabIndex = 18;
             // 
+            // ValidarerrorProvider
+            // 
+            this.ValidarerrorProvider.ContainerControl = this;
+            // 
+            // TipoUsuariobutton
+            // 
+            this.TipoUsuariobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TipoUsuariobutton.Image = ((System.Drawing.Image)(resources.GetObject("TipoUsuariobutton.Image")));
+            this.TipoUsuariobutton.Location = new System.Drawing.Point(459, 226);
+            this.TipoUsuariobutton.Name = "TipoUsuariobutton";
+            this.TipoUsuariobutton.Size = new System.Drawing.Size(46, 47);
+            this.TipoUsuariobutton.TabIndex = 19;
+            this.TipoUsuariobutton.UseVisualStyleBackColor = true;
+            this.TipoUsuariobutton.Click += new System.EventHandler(this.TipoUsuariobutton_Click);
+            // 
             // rUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 578);
+            this.Controls.Add(this.TipoUsuariobutton);
             this.Controls.Add(this.TipoUsuariocomboBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.PermisosgroupBox);
@@ -349,11 +370,13 @@
             this.Controls.Add(this.label1);
             this.Name = "rUsuarios";
             this.Text = "rUsuarios";
+            this.Load += new System.EventHandler(this.rUsuarios_Load);
             this.RegistrosgroupBox.ResumeLayout(false);
             this.RegistrosgroupBox.PerformLayout();
             this.ConsultasgroupBox.ResumeLayout(false);
             this.ConsultasgroupBox.PerformLayout();
             this.PermisosgroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,5 +411,7 @@
         private System.Windows.Forms.CheckBox CServicioscheckBox;
         private System.Windows.Forms.CheckBox CUsuarioscheckBox;
         private System.Windows.Forms.CheckBox CClientescheckBox;
+        private System.Windows.Forms.ErrorProvider ValidarerrorProvider;
+        private System.Windows.Forms.Button TipoUsuariobutton;
     }
 }

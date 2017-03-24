@@ -26,21 +26,56 @@ namespace DAL
             }
         }
 
-        public TEntity Guardar(TEntity laEntidad)
+        //public TEntity Guardar(TEntity laEntidad)
+        //{
+        //    TEntity Result = null;
+        //    try
+        //    {
+        //        EntitySet.Add(laEntidad);
+        //        Contex.SaveChanges();
+        //        Result = laEntidad;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        MessageBox.Show(e.Message);
+        //    }
+
+        //    return Result;
+        //}
+
+        public bool Guardar(TEntity laEntidad)
         {
-            TEntity Result = null;
             try
             {
                 EntitySet.Add(laEntidad);
                 Contex.SaveChanges();
-                Result = laEntidad;
+                return true;
             }
-            catch (Exception e){
-                MessageBox.Show(e.Message); 
-            }
+            catch (Exception)
+            {
 
-            return Result;
+                throw;
+            }
+            return false;
         }
+
+        //public bool Insertar(TEntity laEntidad)
+        //{
+        //    bool Result = false;
+        //    try
+        //    {
+        //        //para que el contexto lo considere como si estubiera recien agregado
+        //        EntitySet.Attach(laEntidad);
+
+        //        //Para que entityframework sepa que la va a actualizar.
+        //        Contex.Entry<TEntity>(laEntidad).State = EntityState.Modified;
+
+        //        Result = Contex.SaveChanges() > 0;
+        //    }
+        //    catch { }
+
+        //    return Result;
+        //}
 
         public bool Modificar(TEntity laEntidad)
         {
@@ -88,7 +123,7 @@ namespace DAL
             return Result;
         }
 
-        public List<TEntity> Lista(Expression<Func<TEntity, bool>> criterioBusqueda)
+        public List<TEntity> Listar(Expression<Func<TEntity, bool>> criterioBusqueda)
         {
             List<TEntity> Result = null;
             try

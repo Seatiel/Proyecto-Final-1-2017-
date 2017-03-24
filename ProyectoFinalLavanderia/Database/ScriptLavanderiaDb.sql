@@ -12,3 +12,19 @@ create table TiposUsuarios(
 TipoUsuarioId int identity(1,1) primary key,
 TipoUsuario varchar(50)
 );
+
+create table Usuarios(
+UsuarioId int identity(1,1) primary key,
+NombreUsuario varchar(125),
+Nombres varchar(125),
+Clave varchar(15),
+TipoUsuarioId int,
+RCliente int,
+RFactura int,
+RServicio int,
+RTipoUsuario int,
+RUsuario int,
+CCliente int,
+CServicio int,
+CUsuario int
+);

@@ -1,4 +1,5 @@
 ﻿using DAL;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,27 @@ namespace BLL
 {
     public class TiposusuariosBLL
     {
-        public static Entidades.TiposUsuarios Guardar(Entidades.TiposUsuarios nuevo)
+        public static bool Guardar(TiposUsuarios tipoUsuario)
         {
-            Entidades.TiposUsuarios creado = null;
-            using (var repositorio = new Repositorio<Entidades.TiposUsuarios>())
+            using (var repositorio = new Repositorio<TiposUsuarios>())
             {
-                creado = repositorio.Guardar(nuevo);
+                try
+                {
+                    if (Buscar(tu => tu.TipoUsuarioId == tipoUsuario.TipoUsuarioId) == null)
+                    {
+                        return repositorio.Guardar(tipoUsuario);
+                    }
+                    else
+                    {
+                        return repositorio.Modificar(tipoUsuario);
+                    }
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
-            return creado;
         }
 
         public static bool Mofidicar(Entidades.TiposUsuarios existente)
@@ -56,7 +70,7 @@ namespace BLL
             {
                 try
                 {
-                    Result = repoitorio.Lista(busqueda).ToList();
+                    Result = repoitorio.Listar(busqueda).ToList();
                 }
                 catch
                 {

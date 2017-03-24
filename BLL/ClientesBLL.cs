@@ -1,4 +1,5 @@
 ﻿using DAL;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,27 @@ namespace BLL
 {
     public class ClientesBLL
     {
-        public static Entidades.Clientes Guardar(Entidades.Clientes nuevo)
+        public static bool Guardar(Clientes cliente)
         {
-            Entidades.Clientes creado = null;
-            using (var repositorio = new Repositorio<Entidades.Clientes>())
+            using (var repositorio = new Repositorio<Clientes>())
             {
-                creado = repositorio.Guardar(nuevo);
+                try
+                {
+                    if (Buscar(c => c.ClienteId == cliente.ClienteId) == null)
+                    {
+                        return repositorio.Guardar(cliente);
+                    }
+                    else
+                    {
+                        return repositorio.Modificar(cliente);
+                    }
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
-            return creado;
         }
 
         public static bool Mofidicar(Entidades.Clientes existente)
@@ -56,7 +70,7 @@ namespace BLL
             {
                 try
                 {
-                    Result = repoitorio.Lista(busqueda).ToList();
+                    Result = repoitorio.Listar(busqueda).ToList();
                 }
                 catch
                 {

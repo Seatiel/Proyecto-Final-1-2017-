@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,9 +12,13 @@ namespace ProyectoFinalLavanderia
 {
     public partial class FormularioPrincipal : Form
     {
-        public FormularioPrincipal()
+        //private Usuarios Usuario;
+        private Form Login;
+
+        public FormularioPrincipal(Form login)
         {
             InitializeComponent();
+            this.Login = login;
         }
 
         private void registrosClientesToolStripMenuItem_Click(object sender, EventArgs e)
