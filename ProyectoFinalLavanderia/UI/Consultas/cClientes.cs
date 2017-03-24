@@ -31,6 +31,11 @@ namespace ProyectoFinalLavanderia.UI.Consultas
             FiltrarcomboBox.Items.Insert(5, "Fecha Creacion");
             FiltrarcomboBox.DataSource = FiltrarcomboBox.Items;
             FiltrarcomboBox.DisplayMember = "Todos";
+
+            //if (FiltrarcomboBox.Items.Count >= 1)
+            //{
+            //    FiltrarcomboBox.SelectedIndex = -1;
+            //}
         }
 
         public bool Validar()
@@ -45,38 +50,59 @@ namespace ProyectoFinalLavanderia.UI.Consultas
 
         public void FiltrarOpcion()
         {
-            if (!Validar())
+            if (FiltrarcomboBox.SelectedIndex == 0)
             {
-                if (FiltrarcomboBox.SelectedIndex == 0)
+                ClientesdataGridView.DataSource = BLL.ClientesBLL.ListarTodo();
+            }
+            else if (FiltrarcomboBox.SelectedIndex == 1)
+            {
+                if (!Validar())
                 {
-                    ClientesdataGridView.DataSource = BLL.ClientesBLL.ListarTodo();
+                    MessageBox.Show("Llenar los campos.");
                 }
-                else if (FiltrarcomboBox.SelectedIndex == 5)
+                else
                 {
                     int num;
                     int.TryParse(FiltrartextBox.Text, out num);
-                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Lista(c => c.ClienteId == num);
-                }                
-                else if (FiltrarcomboBox.SelectedIndex == 1)
-                {
-                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Lista(c => c.Nombres.Equals(FiltrarcomboBox.Text));
-                }
-                else if (FiltrarcomboBox.SelectedIndex == 2)
-                {
-                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Lista(c => c.Direccion.Equals(FiltrarcomboBox.Text));
-                }
-                else if (FiltrarcomboBox.SelectedIndex == 3)
-                {
-                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Lista(c => c.Telefono.Equals(FiltrarcomboBox.Text));
-                }
-                else if (FiltrarcomboBox.SelectedIndex == 4)
-                {
-                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Lista(c => c.FechaCreacion.Equals(FechaCreaciondateTimePicker.Value.Date));
+                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.ClienteId == num);
                 }
             }
-            else
+            else if (FiltrarcomboBox.SelectedIndex == 2)
             {
-                MessageBox.Show("Llenar los campos.");
+                if (!Validar())
+                {
+                    MessageBox.Show("Llenar los campos.");
+                }
+                else
+                {
+                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Nombres == FiltrarcomboBox.Text);
+                }                
+            }
+            else if (FiltrarcomboBox.SelectedIndex == 3)
+            {
+                if (!Validar())
+                {
+                    MessageBox.Show("Llenar los campos.");
+                }
+                else
+                {
+                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Direccion == FiltrarcomboBox.Text);
+                }                    
+            }
+            else if (FiltrarcomboBox.SelectedIndex == 4)
+            {
+                if (!Validar())
+                {
+                    MessageBox.Show("Llenar los campos.");
+                }
+                else
+                {
+                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Telefono == FiltrarcomboBox.Text);
+                }                    
+            }
+            else if (FiltrarcomboBox.SelectedIndex == 5)
+            {
+                ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.FechaCreacion.Equals(FechaCreaciondateTimePicker.Value.Date));
             }
         }
 
@@ -85,6 +111,54 @@ namespace ProyectoFinalLavanderia.UI.Consultas
             FiltrarOpcion();
         }
 
-        
+        private void FiltrarcomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClientesdataGridView.DataSource = null;
+            int num = Utilitarios.ToInt(FiltrartextBox.Text);
+            if (FiltrarcomboBox.SelectedIndex == 0)
+            {
+                ClientesdataGridView.DataSource = BLL.ClientesBLL.ListarTodo();
+                FiltrartextBox.Enabled = false;
+                FechaCreaciondateTimePicker.Enabled = false;
+            }
+            else if (FiltrarcomboBox.SelectedIndex == 1)
+            {
+                ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.ClienteId == num);
+                FiltrartextBox.Enabled = true;
+                FechaCreaciondateTimePicker.Enabled = false;
+            }
+            else if (FiltrarcomboBox.SelectedIndex == 2)
+            {
+                ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Nombres == FiltrartextBox.Text);
+                FiltrartextBox.Enabled = true;
+                FechaCreaciondateTimePicker.Enabled = false;
+            }
+            else if (FiltrarcomboBox.SelectedIndex == 3)
+            {
+                ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Direccion == FiltrartextBox.Text);
+                FiltrartextBox.Enabled = true;
+                FechaCreaciondateTimePicker.Enabled = false;
+            }
+            else if (FiltrarcomboBox.SelectedIndex == 4)
+            {
+                ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Telefono == FiltrartextBox.Text);
+                FiltrartextBox.Enabled = true;
+                FechaCreaciondateTimePicker.Enabled = false;
+            }
+            else if (FiltrarcomboBox.SelectedIndex == 5)
+            {
+                FechaCreaciondateTimePicker.Enabled = true;
+                FiltrartextBox.Enabled = false;
+                if (FechaCreaciondateTimePicker != null)
+                {
+                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.FechaCreacion.Equals(FechaCreaciondateTimePicker.Value.Date));
+                }
+            }
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

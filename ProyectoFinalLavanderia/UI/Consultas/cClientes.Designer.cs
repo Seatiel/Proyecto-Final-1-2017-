@@ -79,6 +79,7 @@
             this.FiltrarcomboBox.Name = "FiltrarcomboBox";
             this.FiltrarcomboBox.Size = new System.Drawing.Size(147, 26);
             this.FiltrarcomboBox.TabIndex = 3;
+            this.FiltrarcomboBox.SelectedIndexChanged += new System.EventHandler(this.FiltrarcomboBox_SelectedIndexChanged);
             // 
             // ClientesdataGridView
             // 
@@ -98,6 +99,7 @@
             this.Imprimirbutton.TabIndex = 5;
             this.Imprimirbutton.Text = "Imprimir";
             this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
             // 
             // ValidarerrorProvider
             // 

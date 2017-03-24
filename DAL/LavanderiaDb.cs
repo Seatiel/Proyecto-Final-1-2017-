@@ -16,6 +16,10 @@ namespace DAL
         public DbSet<Clientes> Cliente { get; set; }
         public DbSet<TiposUsuarios> TipoUsuario { get; set; }
         public DbSet<Usuarios> Usuario { get; set; }
+        public DbSet<Servicios> Servicio { get; set; }
+        public DbSet<Facturas> Factura { get; set; }
+
+
 
 
     }

@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Imprimirbutton = new System.Windows.Forms.Button();
             this.ServiciosdataGridView = new System.Windows.Forms.DataGridView();
             this.FiltrarcomboBox = new System.Windows.Forms.ComboBox();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.FiltrartextBox = new System.Windows.Forms.TextBox();
+            this.ValidarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ServiciosdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // Imprimirbutton
@@ -46,6 +49,7 @@
             this.Imprimirbutton.TabIndex = 13;
             this.Imprimirbutton.Text = "Imprimir";
             this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
             // 
             // ServiciosdataGridView
             // 
@@ -64,6 +68,7 @@
             this.FiltrarcomboBox.Name = "FiltrarcomboBox";
             this.FiltrarcomboBox.Size = new System.Drawing.Size(147, 26);
             this.FiltrarcomboBox.TabIndex = 11;
+            this.FiltrarcomboBox.SelectedIndexChanged += new System.EventHandler(this.FiltrarcomboBox_SelectedIndexChanged);
             // 
             // Buscarbutton
             // 
@@ -74,6 +79,7 @@
             this.Buscarbutton.TabIndex = 10;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // label1
             // 
@@ -93,6 +99,10 @@
             this.FiltrartextBox.Size = new System.Drawing.Size(359, 24);
             this.FiltrartextBox.TabIndex = 8;
             // 
+            // ValidarerrorProvider
+            // 
+            this.ValidarerrorProvider.ContainerControl = this;
+            // 
             // cServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -107,6 +117,7 @@
             this.Name = "cServicios";
             this.Text = "cServicios";
             ((System.ComponentModel.ISupportInitialize)(this.ServiciosdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,5 +131,6 @@
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox FiltrartextBox;
+        private System.Windows.Forms.ErrorProvider ValidarerrorProvider;
     }
 }

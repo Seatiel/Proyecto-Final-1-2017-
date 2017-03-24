@@ -39,7 +39,13 @@ namespace ProyectoFinalLavanderia
             ru.Show();
         }
 
-        private void consutasClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void registrosServiciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Registros.rServicios rs = new UI.Registros.rServicios();
+            rs.Show();
+        }
+
+        private void consultasClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UI.Consultas.cClientes cc = new UI.Consultas.cClientes();
             cc.Show();
@@ -56,5 +62,6 @@ namespace ProyectoFinalLavanderia
             UI.Consultas.cUsuarios cu = new UI.Consultas.cUsuarios();
             cu.Show();
         }
+
     }
 }

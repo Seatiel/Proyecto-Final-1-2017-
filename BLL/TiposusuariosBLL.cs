@@ -63,7 +63,7 @@ namespace BLL
             return Result;
         }
 
-        public static List<Entidades.TiposUsuarios> Lista(Expression<Func<Entidades.TiposUsuarios, bool>> busqueda)
+        public static List<Entidades.TiposUsuarios> Listar(Expression<Func<Entidades.TiposUsuarios, bool>> busqueda)
         {
             List<Entidades.TiposUsuarios> Result = null;
             using (var repoitorio = new Repositorio<Entidades.TiposUsuarios>())

@@ -72,6 +72,7 @@
             this.ClavetextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClavetextBox.Location = new System.Drawing.Point(120, 151);
             this.ClavetextBox.Name = "ClavetextBox";
+            this.ClavetextBox.PasswordChar = '*';
             this.ClavetextBox.Size = new System.Drawing.Size(273, 24);
             this.ClavetextBox.TabIndex = 3;
             // 

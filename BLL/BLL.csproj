@@ -49,7 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientesBLL.cs" />
+    <Compile Include="FacturasBLL.cs" />
+    <Compile Include="FacturasServiciosBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiciosBLL.cs" />
     <Compile Include="TiposusuariosBLL.cs" />
     <Compile Include="UsuariosBLL.cs" />
   </ItemGroup>

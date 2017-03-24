@@ -16,7 +16,7 @@ namespace BLL
             {
                 try
                 {
-                    if (Buscar(p => p.UsuarioId == usuario.UsuarioId) == null)
+                    if (Buscar(u => u.UsuarioId == usuario.UsuarioId) == null)
                     {
                         return repositorio.Guardar(usuario);
                     }
@@ -63,7 +63,7 @@ namespace BLL
             return Result;
         }
 
-        public static List<Entidades.Usuarios> Lista(Expression<Func<Entidades.Usuarios, bool>> busqueda)
+        public static List<Entidades.Usuarios> Listar(Expression<Func<Entidades.Usuarios, bool>> busqueda)
         {
             List<Entidades.Usuarios> Result = null;
             using (var repoitorio = new Repositorio<Entidades.Usuarios>())

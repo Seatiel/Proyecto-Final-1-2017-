@@ -28,3 +28,9 @@ CCliente int,
 CServicio int,
 CUsuario int
 );
+
+create table Servicios(
+ServicioId int identity(1,1) primary key,
+Descripcion varchar(125),
+Costo decimal
+);

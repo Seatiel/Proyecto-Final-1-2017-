@@ -63,7 +63,7 @@ namespace BLL
             return Result;
         }
 
-        public static List<Entidades.Clientes> Lista(Expression<Func<Entidades.Clientes, bool>> busqueda)
+        public static List<Entidades.Clientes> Listar(Expression<Func<Entidades.Clientes, bool>> busqueda)
         {
             List<Entidades.Clientes> Result = null;
             using (var repoitorio = new Repositorio<Entidades.Clientes>())
