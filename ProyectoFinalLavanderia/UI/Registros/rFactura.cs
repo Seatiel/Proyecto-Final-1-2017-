@@ -21,8 +21,14 @@ namespace ProyectoFinalLavanderia.UI.Registros
             LlenarComboCliente();
         }
 
-
-
+        private Facturas LlenarClase()
+        {
+            Facturas factura = new Facturas();
+            factura.Fecha = FechadateTimePicker.Value;
+            factura.ClienteId = (int)ClientecomboBox.SelectedValue;
+            factura.Total = Convert.ToDecimal(TotalmaskedTextBox.Text);
+            return factura;
+        }
 
         private void Limpiar()
         {
@@ -56,6 +62,31 @@ namespace ProyectoFinalLavanderia.UI.Registros
                 DirecciontextBox.Text = cliente.Direccion;
                 TelefonomaskedTextBox.Text = cliente.Telefono;
             }
+        }
+
+        private void Nuevobutton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void Guardarbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Agregarbutton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

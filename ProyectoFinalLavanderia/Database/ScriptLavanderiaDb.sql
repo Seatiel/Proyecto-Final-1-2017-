@@ -34,3 +34,16 @@ ServicioId int identity(1,1) primary key,
 Descripcion varchar(125),
 Costo decimal
 );
+
+create table Facturas(
+FacturaId int identity(1,1) primary key,
+Fecha date,
+ClienteId int,
+Total decimal
+);
+
+create table FacturasServicios(
+FacturaServicioId int identity(1,1) primary key,
+FacturaId int,
+ServicioId int,
+);
