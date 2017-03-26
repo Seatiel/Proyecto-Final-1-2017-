@@ -37,7 +37,9 @@
             this.Imprimirbutton = new System.Windows.Forms.Button();
             this.ValidarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.FechaCreaciondateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ClientesdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -109,28 +111,50 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 89);
+            this.label2.Location = new System.Drawing.Point(12, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 18);
+            this.label2.Size = new System.Drawing.Size(61, 18);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Fecha de Creacion:";
+            this.label2.Text = "Desde:";
             // 
-            // FechaCreaciondateTimePicker
+            // DesdedateTimePicker
             // 
-            this.FechaCreaciondateTimePicker.CustomFormat = "yyyy/MM/dd";
-            this.FechaCreaciondateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaCreaciondateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaCreaciondateTimePicker.Location = new System.Drawing.Point(190, 85);
-            this.FechaCreaciondateTimePicker.Name = "FechaCreaciondateTimePicker";
-            this.FechaCreaciondateTimePicker.Size = new System.Drawing.Size(141, 24);
-            this.FechaCreaciondateTimePicker.TabIndex = 7;
+            this.DesdedateTimePicker.CustomFormat = "yyyy/MM/dd";
+            this.DesdedateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DesdedateTimePicker.Location = new System.Drawing.Point(90, 88);
+            this.DesdedateTimePicker.Name = "DesdedateTimePicker";
+            this.DesdedateTimePicker.Size = new System.Drawing.Size(141, 24);
+            this.DesdedateTimePicker.TabIndex = 7;
+            // 
+            // HastadateTimePicker
+            // 
+            this.HastadateTimePicker.CustomFormat = "yyyy/MM/dd";
+            this.HastadateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.HastadateTimePicker.Location = new System.Drawing.Point(345, 88);
+            this.HastadateTimePicker.Name = "HastadateTimePicker";
+            this.HastadateTimePicker.Size = new System.Drawing.Size(141, 24);
+            this.HastadateTimePicker.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(265, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 18);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Hasta:";
             // 
             // cClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 471);
-            this.Controls.Add(this.FechaCreaciondateTimePicker);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.HastadateTimePicker);
+            this.Controls.Add(this.DesdedateTimePicker);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.ClientesdataGridView);
@@ -157,7 +181,9 @@
         private System.Windows.Forms.DataGridView ClientesdataGridView;
         private System.Windows.Forms.Button Imprimirbutton;
         private System.Windows.Forms.ErrorProvider ValidarerrorProvider;
-        private System.Windows.Forms.DateTimePicker FechaCreaciondateTimePicker;
+        private System.Windows.Forms.DateTimePicker DesdedateTimePicker;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker HastadateTimePicker;
     }
 }

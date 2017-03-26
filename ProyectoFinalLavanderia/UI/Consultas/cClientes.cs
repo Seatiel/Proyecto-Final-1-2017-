@@ -28,10 +28,9 @@ namespace ProyectoFinalLavanderia.UI.Consultas
             FiltrarcomboBox.Items.Insert(2, "Nombres");
             FiltrarcomboBox.Items.Insert(3, "Direccion");
             FiltrarcomboBox.Items.Insert(4, "Telefono");
-            FiltrarcomboBox.Items.Insert(5, "Fecha Creacion");
+            FiltrarcomboBox.Items.Insert(5, "Fecha");
             FiltrarcomboBox.DataSource = FiltrarcomboBox.Items;
             FiltrarcomboBox.DisplayMember = "Todos";
-
             //if (FiltrarcomboBox.Items.Count >= 1)
             //{
             //    FiltrarcomboBox.SelectedIndex = -1;
@@ -102,7 +101,7 @@ namespace ProyectoFinalLavanderia.UI.Consultas
             }
             else if (FiltrarcomboBox.SelectedIndex == 5)
             {
-                ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.FechaCreacion.Equals(FechaCreaciondateTimePicker.Value.Date));
+                ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.FechaCreacion >= DesdedateTimePicker.Value.Date && c.FechaCreacion <= HastadateTimePicker.Value.Date);
             }
         }
 
@@ -119,39 +118,45 @@ namespace ProyectoFinalLavanderia.UI.Consultas
             {
                 ClientesdataGridView.DataSource = BLL.ClientesBLL.ListarTodo();
                 FiltrartextBox.Enabled = false;
-                FechaCreaciondateTimePicker.Enabled = false;
+                DesdedateTimePicker.Enabled = false;
+                HastadateTimePicker.Enabled = false;
             }
             else if (FiltrarcomboBox.SelectedIndex == 1)
             {
                 ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.ClienteId == num);
                 FiltrartextBox.Enabled = true;
-                FechaCreaciondateTimePicker.Enabled = false;
+                DesdedateTimePicker.Enabled = false;
+                HastadateTimePicker.Enabled = false;
             }
             else if (FiltrarcomboBox.SelectedIndex == 2)
             {
                 ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Nombres == FiltrartextBox.Text);
                 FiltrartextBox.Enabled = true;
-                FechaCreaciondateTimePicker.Enabled = false;
+                DesdedateTimePicker.Enabled = false;
+                HastadateTimePicker.Enabled = false;
             }
             else if (FiltrarcomboBox.SelectedIndex == 3)
             {
                 ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Direccion == FiltrartextBox.Text);
                 FiltrartextBox.Enabled = true;
-                FechaCreaciondateTimePicker.Enabled = false;
+                DesdedateTimePicker.Enabled = false;
+                HastadateTimePicker.Enabled = false;
             }
             else if (FiltrarcomboBox.SelectedIndex == 4)
             {
                 ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Telefono == FiltrartextBox.Text);
                 FiltrartextBox.Enabled = true;
-                FechaCreaciondateTimePicker.Enabled = false;
+                DesdedateTimePicker.Enabled = false;
+                HastadateTimePicker.Enabled = false;
             }
             else if (FiltrarcomboBox.SelectedIndex == 5)
             {
-                FechaCreaciondateTimePicker.Enabled = true;
+                DesdedateTimePicker.Enabled = true;
+                HastadateTimePicker.Enabled = true;
                 FiltrartextBox.Enabled = false;
-                if (FechaCreaciondateTimePicker != null)
+                if (DesdedateTimePicker != null)
                 {
-                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.FechaCreacion.Equals(FechaCreaciondateTimePicker.Value.Date));
+                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.FechaCreacion >= DesdedateTimePicker.Value.Date && c.FechaCreacion <= HastadateTimePicker.Value.Date);
                 }
             }
         }
