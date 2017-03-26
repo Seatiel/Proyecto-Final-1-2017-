@@ -18,11 +18,11 @@ namespace ProyectoFinalLavanderia.UI.Login
         public Login()
         {
             InitializeComponent();
-            CrearUsuarioAdmin();
+            Crear();
             intentos = 0;
         }
 
-        private void CrearUsuarioAdmin()
+        private void Crear()
         {
             if (BLL.UsuariosBLL.ListarTodo().Count() <= 0)
             {
@@ -31,6 +31,16 @@ namespace ProyectoFinalLavanderia.UI.Login
             if (BLL.TiposusuariosBLL.ListarTodo().Count() <= 0)
             {
                 BLL.TiposusuariosBLL.Guardar(new Entidades.TiposUsuarios(1,"Administrador"));
+            }
+            if (BLL.ServiciosBLL.ListarTodo().Count() <= 0)
+            {
+                BLL.ServiciosBLL.Guardar(new Entidades.Servicios(1, "Pantalon Lavado y Planchado", 75));
+                BLL.ServiciosBLL.Guardar(new Entidades.Servicios(2, "Camisa Lavado y Planchado", 75));
+                BLL.ServiciosBLL.Guardar(new Entidades.Servicios(3, "Sueter Lavado y Planchado", 75));
+            }
+            if (BLL.ClientesBLL.ListarTodo().Count() <= 0)
+            {
+                BLL.ClientesBLL.Guardar(new Entidades.Clientes(1, "Seatiel Ygnacio", "C/ D #19 Urb. Alvarez", "8092697360", DateTime.Now, "Seatiel_2010@hotmail.com"));
             }
         }
 

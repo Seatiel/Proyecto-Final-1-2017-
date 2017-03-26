@@ -16,7 +16,7 @@ namespace BLL
             {
                 try
                 {
-                    if (Buscar(f=> f.FacturaId == factura.FacturaId) == null)
+                    if (Buscar(f => f.FacturaId == factura.FacturaId) == null)
                     {
                         return repositorio.Guardar(factura);
                     }
@@ -55,12 +55,22 @@ namespace BLL
 
         public static Entidades.Facturas Buscar(Expression<Func<Entidades.Facturas, bool>> criterioBusqueda)
         {
-            Entidades.Facturas Result = null;
-            using (var repoitorio = new Repositorio<Entidades.Facturas>())
+            Facturas factura = null;
+            using (var repositorio = new Repositorio<Facturas>())
             {
-                Result = repoitorio.Buscar(criterioBusqueda);
+                try
+                {
+                    factura = repositorio.Buscar(criterioBusqueda);
+                    if (factura != null)
+                        factura.Detalle.Count();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
-            return Result;
+            return factura;
         }
 
         public static List<Entidades.Facturas> Listar(Expression<Func<Entidades.Facturas, bool>> busqueda)

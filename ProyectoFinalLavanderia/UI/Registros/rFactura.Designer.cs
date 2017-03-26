@@ -44,12 +44,10 @@
             this.FacturaDetallegroupBox = new System.Windows.Forms.GroupBox();
             this.TotalmaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.ImportemaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.CantidadnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CostomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.ServicioIdmaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -189,12 +187,10 @@
             // 
             this.FacturaDetallegroupBox.Controls.Add(this.TotalmaskedTextBox);
             this.FacturaDetallegroupBox.Controls.Add(this.label11);
-            this.FacturaDetallegroupBox.Controls.Add(this.ImportemaskedTextBox);
             this.FacturaDetallegroupBox.Controls.Add(this.CantidadnumericUpDown);
             this.FacturaDetallegroupBox.Controls.Add(this.CostomaskedTextBox);
             this.FacturaDetallegroupBox.Controls.Add(this.DescripciontextBox);
             this.FacturaDetallegroupBox.Controls.Add(this.ServicioIdmaskedTextBox);
-            this.FacturaDetallegroupBox.Controls.Add(this.label10);
             this.FacturaDetallegroupBox.Controls.Add(this.label9);
             this.FacturaDetallegroupBox.Controls.Add(this.label7);
             this.FacturaDetallegroupBox.Controls.Add(this.label6);
@@ -211,6 +207,7 @@
             // 
             // TotalmaskedTextBox
             // 
+            this.TotalmaskedTextBox.Enabled = false;
             this.TotalmaskedTextBox.Location = new System.Drawing.Point(918, 280);
             this.TotalmaskedTextBox.Name = "TotalmaskedTextBox";
             this.TotalmaskedTextBox.Size = new System.Drawing.Size(75, 24);
@@ -225,13 +222,6 @@
             this.label11.TabIndex = 27;
             this.label11.Text = "Total:";
             // 
-            // ImportemaskedTextBox
-            // 
-            this.ImportemaskedTextBox.Location = new System.Drawing.Point(669, 60);
-            this.ImportemaskedTextBox.Name = "ImportemaskedTextBox";
-            this.ImportemaskedTextBox.Size = new System.Drawing.Size(75, 24);
-            this.ImportemaskedTextBox.TabIndex = 26;
-            // 
             // CantidadnumericUpDown
             // 
             this.CantidadnumericUpDown.Location = new System.Drawing.Point(533, 60);
@@ -241,6 +231,7 @@
             // 
             // CostomaskedTextBox
             // 
+            this.CostomaskedTextBox.Enabled = false;
             this.CostomaskedTextBox.Location = new System.Drawing.Point(418, 60);
             this.CostomaskedTextBox.Name = "CostomaskedTextBox";
             this.CostomaskedTextBox.Size = new System.Drawing.Size(75, 24);
@@ -248,6 +239,7 @@
             // 
             // DescripciontextBox
             // 
+            this.DescripciontextBox.Enabled = false;
             this.DescripciontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DescripciontextBox.Location = new System.Drawing.Point(127, 60);
             this.DescripciontextBox.Name = "DescripciontextBox";
@@ -260,15 +252,7 @@
             this.ServicioIdmaskedTextBox.Name = "ServicioIdmaskedTextBox";
             this.ServicioIdmaskedTextBox.Size = new System.Drawing.Size(79, 24);
             this.ServicioIdmaskedTextBox.TabIndex = 23;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(666, 38);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 18);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Importe:";
+            this.ServicioIdmaskedTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ServicioIdmaskedTextBox_KeyPress);
             // 
             // label9
             // 
@@ -414,12 +398,10 @@
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Buscarbutton;
-        private System.Windows.Forms.MaskedTextBox ImportemaskedTextBox;
         private System.Windows.Forms.NumericUpDown CantidadnumericUpDown;
         private System.Windows.Forms.MaskedTextBox CostomaskedTextBox;
         private System.Windows.Forms.TextBox DescripciontextBox;
         private System.Windows.Forms.MaskedTextBox ServicioIdmaskedTextBox;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;

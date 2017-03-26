@@ -63,5 +63,15 @@ namespace ProyectoFinalLavanderia
             cu.Show();
         }
 
+        private void registrosFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Registros.rFactura rf = new UI.Registros.rFactura();
+            rf.Show();  
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

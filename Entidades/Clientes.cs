@@ -18,5 +18,20 @@ namespace Entidades
         //public int UsuarioId { get; set; }
 
 
+        public Clientes()
+        {
+
+        }
+
+        public Clientes(int clienteId, string nombres, string direccion, string telefono, DateTime fecha, string email)
+        {
+            this.ClienteId = clienteId;
+            this.Nombres = nombres;
+            this.Direccion = direccion;
+            this.Telefono = telefono;
+            this.FechaCreacion = fecha;
+            this.Email = email;
+        }
+
     }
 }

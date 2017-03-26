@@ -32,15 +32,16 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registroDeTiposDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rsgistrosUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consutasClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasServiciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrosFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrosServiciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeTiposDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,10 +49,9 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ayudaToolStripMenuItem,
             this.registrosToolStripMenuItem,
-            this.consultasToolStripMenuItem,
-            this.reportesToolStripMenuItem,
-            this.ayudaToolStripMenuItem});
+            this.consultasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(686, 28);
@@ -62,9 +62,10 @@
             // 
             this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrosClientesToolStripMenuItem,
+            this.registrosFacturasToolStripMenuItem,
+            this.registrosServiciosToolStripMenuItem,
             this.registroDeTiposDeUsuariosToolStripMenuItem,
-            this.rsgistrosUsuariosToolStripMenuItem,
-            this.registrosServiciosToolStripMenuItem});
+            this.rsgistrosUsuariosToolStripMenuItem});
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.registrosToolStripMenuItem.Text = "Registros";
@@ -73,21 +74,14 @@
             // 
             this.registrosClientesToolStripMenuItem.Name = "registrosClientesToolStripMenuItem";
             this.registrosClientesToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
-            this.registrosClientesToolStripMenuItem.Text = "Registros Clientes";
+            this.registrosClientesToolStripMenuItem.Text = "&Registros &Clientes";
             this.registrosClientesToolStripMenuItem.Click += new System.EventHandler(this.registrosClientesToolStripMenuItem_Click);
-            // 
-            // registroDeTiposDeUsuariosToolStripMenuItem
-            // 
-            this.registroDeTiposDeUsuariosToolStripMenuItem.Name = "registroDeTiposDeUsuariosToolStripMenuItem";
-            this.registroDeTiposDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
-            this.registroDeTiposDeUsuariosToolStripMenuItem.Text = "Registros Tipos de Usuarios";
-            this.registroDeTiposDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.registroDeTiposDeUsuariosToolStripMenuItem_Click);
             // 
             // rsgistrosUsuariosToolStripMenuItem
             // 
             this.rsgistrosUsuariosToolStripMenuItem.Name = "rsgistrosUsuariosToolStripMenuItem";
             this.rsgistrosUsuariosToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
-            this.rsgistrosUsuariosToolStripMenuItem.Text = "Registros Usuarios";
+            this.rsgistrosUsuariosToolStripMenuItem.Text = "Registros &Usuarios";
             this.rsgistrosUsuariosToolStripMenuItem.Click += new System.EventHandler(this.rsgistrosUsuariosToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
@@ -121,24 +115,39 @@
             this.consultasUsuariosToolStripMenuItem.Text = "Consultas Usuarios";
             this.consultasUsuariosToolStripMenuItem.Click += new System.EventHandler(this.consultasUsuariosToolStripMenuItem_Click);
             // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
-            this.reportesToolStripMenuItem.Text = "Reportes";
-            // 
             // ayudaToolStripMenuItem
             // 
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salirToolStripMenuItem});
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.ayudaToolStripMenuItem.Text = "Archivos";
+            // 
+            // registrosFacturasToolStripMenuItem
+            // 
+            this.registrosFacturasToolStripMenuItem.Name = "registrosFacturasToolStripMenuItem";
+            this.registrosFacturasToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.registrosFacturasToolStripMenuItem.Text = "Registros &Facturas";
+            this.registrosFacturasToolStripMenuItem.Click += new System.EventHandler(this.registrosFacturasToolStripMenuItem_Click);
             // 
             // registrosServiciosToolStripMenuItem
             // 
             this.registrosServiciosToolStripMenuItem.Name = "registrosServiciosToolStripMenuItem";
             this.registrosServiciosToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
-            this.registrosServiciosToolStripMenuItem.Text = "Registros Servicios";
-            this.registrosServiciosToolStripMenuItem.Click += new System.EventHandler(this.registrosServiciosToolStripMenuItem_Click);
+            this.registrosServiciosToolStripMenuItem.Text = "Registros &Servicios";
+            // 
+            // registroDeTiposDeUsuariosToolStripMenuItem
+            // 
+            this.registroDeTiposDeUsuariosToolStripMenuItem.Name = "registroDeTiposDeUsuariosToolStripMenuItem";
+            this.registroDeTiposDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.registroDeTiposDeUsuariosToolStripMenuItem.Text = "Registros &Tipos de Usuarios";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // FormularioPrincipal
             // 
@@ -163,15 +172,16 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem registrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrosClientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registroDeTiposDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rsgistrosUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consutasClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasServiciosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrosFacturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrosServiciosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDeTiposDeUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }
 

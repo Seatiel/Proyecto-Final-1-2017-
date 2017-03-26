@@ -16,7 +16,7 @@ namespace ProyectoFinalLavanderia.UI.Registros
         public rClientes()
         {
             InitializeComponent();
-        }
+        }        
 
         private Clientes LlenarClase()
         {
@@ -29,6 +29,7 @@ namespace ProyectoFinalLavanderia.UI.Registros
 
             return cliente;
         }
+
 
         public void Limpiar()
         {

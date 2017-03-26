@@ -14,7 +14,7 @@ namespace ProyectoFinalLavanderia.UI.Registros
     {
         public rServicios()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private Servicios LlenarClase()
@@ -23,7 +23,7 @@ namespace ProyectoFinalLavanderia.UI.Registros
             servicio.Descripcion = DescripciontextBox.Text;
             servicio.Costo = Convert.ToDecimal(CostomaskedTextBox.Text);
             return servicio;
-        }
+        }        
 
         public void Limpiar()
         {

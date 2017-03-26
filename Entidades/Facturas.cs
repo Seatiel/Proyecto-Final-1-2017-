@@ -14,7 +14,7 @@ namespace Entidades
         public int ClienteId { get; set; }
         public decimal Total { get; set; }
 
-        public virtual Clientes Cliente { get; set; }
+        //public virtual Clientes Cliente { get; set; }
 
         public virtual ICollection<FacturasServicios> Detalle { get; set; } //Muchos
 

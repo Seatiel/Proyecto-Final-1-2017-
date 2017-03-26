@@ -16,12 +16,12 @@ namespace Entidades
         public decimal Cantidad { get; set; }
         public decimal Costo { get; set; }
 
-        public virtual Servicios Servicio { get; set; }
-        public virtual Facturas Cotizaciones { get; set; } //Uno
+        public Servicios Servicio { get; set; }
+        //public virtual Facturas Cotizaciones { get; set; } //Uno
 
         public FacturasServicios()
         {
-            Servicio = new Servicios();
+            //Servicio = new Servicios();
         }
 
         public FacturasServicios(int servicioId, string descripcion, decimal cantidad, decimal costo)
