@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,8 +19,13 @@ namespace ProyectoFinalLavanderia.UI.Reportes
 
         private void rpFacturas_Load(object sender, EventArgs e)
         {
-
-            this.reportViewer1.RefreshReport();
+            this.FacturasreportViewer.RefreshReport();
+            FacturasreportViewer.Reset();
+            FacturasreportViewer.ProcessingMode = ProcessingMode.Local;
+            FacturasreportViewer.LocalReport.ReportPath = @"C:\Users\Seatiel\Dropbox\Proyecto de Aplicada (1-2017)\ProyectoFinalLavanderia\ProyectoFinalLavanderia\UI\Reportes\FacturasReport.rdlc";
+            ReportDataSource source = new ReportDataSource("LavanderiaDataSet", BLL.FacturasBLL.ListarTodo());
+            FacturasreportViewer.LocalReport.DataSources.Add(source);
+            this.FacturasreportViewer.RefreshReport();
         }
     }
 }

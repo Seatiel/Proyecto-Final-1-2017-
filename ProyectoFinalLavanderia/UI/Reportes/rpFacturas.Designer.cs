@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.FacturasreportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // FacturasreportViewer
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(736, 483);
-            this.reportViewer1.TabIndex = 0;
+            this.FacturasreportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FacturasreportViewer.Location = new System.Drawing.Point(0, 0);
+            this.FacturasreportViewer.Name = "FacturasreportViewer";
+            this.FacturasreportViewer.Size = new System.Drawing.Size(736, 483);
+            this.FacturasreportViewer.TabIndex = 0;
             // 
             // rpFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 483);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.FacturasreportViewer);
             this.Name = "rpFacturas";
             this.Text = "rpFacturas";
             this.Load += new System.EventHandler(this.rpFacturas_Load);
@@ -54,6 +54,6 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer FacturasreportViewer;
     }
 }

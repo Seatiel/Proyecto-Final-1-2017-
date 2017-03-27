@@ -120,31 +120,30 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Imprimirbutton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAAKYAAACmAd19/zgAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAABU0lEQVRIS73VsUoDQRDG8Y1VSBUIARshNmJpmUbwDewsUttbBMTSSiwtfYsgWAra6RNIQAu1FBFL
-        C+X8/sdEN8tojmTPhR8ss9/OkCOXhKIoauUWc3KL0BrJe0UjrwfcIrTGsintGciMvR5wi+CSbHhnMTJk
-        vTOwtuVW3hKfUnUA2fQ+PekdHmVHlmVNeKbs76TqALLc4S492NOT3oFU08I80w85lBc5tf1fyJBlz922
-        9WpKuYkHNGRPjufE3YY7QJakx2EO1nNqwLoceeF5WM+fAV5oEfS03v88QKsjV3ItNxWRvZTObwNakwM7
-        7MuT7MrWDGTI9pMeLSk3F3ImB4lnKV80rYHVYgM740Ujm57Tk96hK/tykniVyYCh1WLDaADZ9Jye3e+P
-        lNLK82PnFcElLtv+XB7kXlaTXJYBfLN6suLkFhpQ6x9OvX+ZubjFfIrwBSNlVUoQlqZDAAAAAElFTkSu
-        QmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        pgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFTSURBVEhLvdWx
+        SgNBEMbxjVVIFQgBGyE2YmmZRvAN7CxS21sExNJKLC19iyBYCtrpE0hAC7UUEUsL5fz+x0Q3y2iOZM+F
+        Hyyz386QI5eEoihq5RZzcovQGsl7RSOvB9witMayKe0ZyIy9HnCL4JJseGcxMmS9M7C25VbeEp9SdQDZ
+        9D496R0eZUeWZU14puzvpOoAstzhLj3Y05PegVTTwjzTDzmUFzm1/V/IkGXP3bb1akq5iQc0ZE+O58Td
+        hjtAlqTHYQ7Wc2rAuhx54XlYz58BXmgR9LTe/zxAqyNXci03FZG9lM5vA1qTAzvsy5PsytYMZMj2kx4t
+        KTcXciYHiWcpXzStgdViAzvjRSObntOT3qEr+3KSeJXJgKHVYsNoANn0nJ7d74+U0srzY+cVwSUu2/5c
+        HuReVpNclgF8s3qy4uQWGlDrH069f5m5uMV8ivAFI2VVShCWpkMAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="Buscarbutton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
 </value>
   </data>
   <metadata name="ValidarerrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

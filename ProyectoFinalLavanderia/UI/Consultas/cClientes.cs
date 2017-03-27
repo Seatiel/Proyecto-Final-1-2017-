@@ -162,10 +162,7 @@ namespace ProyectoFinalLavanderia.UI.Consultas
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
             var reporte = new Reportes.rpClientes();
-            reporte.Show();
-
-            //new UI.Reportes.rpClientes(Lista).Show();
-            //new UI.Reportes.rpClientes(Lista).Activate();
+            reporte.Show();            
         }
     }
 }

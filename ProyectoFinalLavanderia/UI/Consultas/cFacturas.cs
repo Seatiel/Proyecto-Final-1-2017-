@@ -95,5 +95,11 @@ namespace ProyectoFinalLavanderia.UI.Consultas
         {
             FiltrarOpcion();
         }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            var reporte = new Reportes.rpFacturas();
+            reporte.Show();
+        }
     }
 }
