@@ -146,7 +146,7 @@
             this.ClientecomboBox.Location = new System.Drawing.Point(106, 33);
             this.ClientecomboBox.Name = "ClientecomboBox";
             this.ClientecomboBox.Size = new System.Drawing.Size(630, 26);
-            this.ClientecomboBox.TabIndex = 12;
+            this.ClientecomboBox.TabIndex = 0;
             this.ClientecomboBox.SelectedIndexChanged += new System.EventHandler(this.ClientecomboBox_SelectedIndexChanged);
             // 
             // FacturasDetallesdataGridView
@@ -165,7 +165,7 @@
             this.FechadateTimePicker.Location = new System.Drawing.Point(116, 57);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(123, 22);
-            this.FechadateTimePicker.TabIndex = 9;
+            this.FechadateTimePicker.TabIndex = 1;
             // 
             // label8
             // 
@@ -182,7 +182,7 @@
             this.FacturaIdmaskedTextBox.Location = new System.Drawing.Point(116, 25);
             this.FacturaIdmaskedTextBox.Name = "FacturaIdmaskedTextBox";
             this.FacturaIdmaskedTextBox.Size = new System.Drawing.Size(44, 22);
-            this.FacturaIdmaskedTextBox.TabIndex = 11;
+            this.FacturaIdmaskedTextBox.TabIndex = 0;
             // 
             // FacturaDetallegroupBox
             // 
@@ -252,7 +252,7 @@
             this.ServicioIdmaskedTextBox.Location = new System.Drawing.Point(9, 60);
             this.ServicioIdmaskedTextBox.Name = "ServicioIdmaskedTextBox";
             this.ServicioIdmaskedTextBox.Size = new System.Drawing.Size(79, 24);
-            this.ServicioIdmaskedTextBox.TabIndex = 23;
+            this.ServicioIdmaskedTextBox.TabIndex = 1;
             this.ServicioIdmaskedTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ServicioIdmaskedTextBox_KeyPress);
             // 
             // label9
@@ -313,7 +313,7 @@
             this.Guardarbutton.Location = new System.Drawing.Point(452, 632);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(126, 46);
-            this.Guardarbutton.TabIndex = 14;
+            this.Guardarbutton.TabIndex = 2;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Guardarbutton.UseVisualStyleBackColor = true;

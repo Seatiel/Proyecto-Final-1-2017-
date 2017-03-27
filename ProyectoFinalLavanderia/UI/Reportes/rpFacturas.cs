@@ -23,7 +23,7 @@ namespace ProyectoFinalLavanderia.UI.Reportes
             FacturasreportViewer.Reset();
             FacturasreportViewer.ProcessingMode = ProcessingMode.Local;
             FacturasreportViewer.LocalReport.ReportPath = @"C:\Users\Seatiel\Dropbox\Proyecto de Aplicada (1-2017)\ProyectoFinalLavanderia\ProyectoFinalLavanderia\UI\Reportes\FacturasReport.rdlc";
-            ReportDataSource source = new ReportDataSource("LavanderiaDataSet", BLL.FacturasBLL.ListarTodo());
+            ReportDataSource source = new ReportDataSource("LavanderiaDataSet", BLL.FacturasBLL.Listar(c=> c.FacturaId == 1));
             FacturasreportViewer.LocalReport.DataSources.Add(source);
             this.FacturasreportViewer.RefreshReport();
         }
