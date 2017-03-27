@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.Imprimirbutton = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cServicios));
             this.ServiciosdataGridView = new System.Windows.Forms.DataGridView();
             this.FiltrarcomboBox = new System.Windows.Forms.ComboBox();
             this.Buscarbutton = new System.Windows.Forms.Button();
@@ -39,17 +39,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ServiciosdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Imprimirbutton
-            // 
-            this.Imprimirbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Imprimirbutton.Location = new System.Drawing.Point(12, 355);
-            this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(112, 39);
-            this.Imprimirbutton.TabIndex = 13;
-            this.Imprimirbutton.Text = "Imprimir";
-            this.Imprimirbutton.UseVisualStyleBackColor = true;
-            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
             // 
             // ServiciosdataGridView
             // 
@@ -73,11 +62,14 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Buscarbutton.Location = new System.Drawing.Point(598, 15);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(112, 39);
+            this.Buscarbutton.Size = new System.Drawing.Size(115, 39);
             this.Buscarbutton.TabIndex = 10;
             this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
@@ -107,8 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 404);
-            this.Controls.Add(this.Imprimirbutton);
+            this.ClientSize = new System.Drawing.Size(745, 370);
             this.Controls.Add(this.ServiciosdataGridView);
             this.Controls.Add(this.FiltrarcomboBox);
             this.Controls.Add(this.Buscarbutton);
@@ -124,8 +115,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Imprimirbutton;
         private System.Windows.Forms.DataGridView ServiciosdataGridView;
         private System.Windows.Forms.ComboBox FiltrarcomboBox;
         private System.Windows.Forms.Button Buscarbutton;

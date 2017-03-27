@@ -183,10 +183,10 @@
             this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(242, 13);
+            this.Buscarbutton.Location = new System.Drawing.Point(256, 13);
             this.Buscarbutton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(127, 45);
+            this.Buscarbutton.Size = new System.Drawing.Size(116, 45);
             this.Buscarbutton.TabIndex = 25;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -201,7 +201,7 @@
             this.Eliminarbutton.Location = new System.Drawing.Point(405, 358);
             this.Eliminarbutton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(127, 45);
+            this.Eliminarbutton.Size = new System.Drawing.Size(119, 45);
             this.Eliminarbutton.TabIndex = 24;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -216,7 +216,7 @@
             this.Guardarbutton.Location = new System.Drawing.Point(246, 358);
             this.Guardarbutton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(136, 45);
+            this.Guardarbutton.Size = new System.Drawing.Size(126, 45);
             this.Guardarbutton.TabIndex = 22;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -231,7 +231,7 @@
             this.Nuevobutton.Location = new System.Drawing.Point(87, 358);
             this.Nuevobutton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(136, 45);
+            this.Nuevobutton.Size = new System.Drawing.Size(119, 45);
             this.Nuevobutton.TabIndex = 23;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
