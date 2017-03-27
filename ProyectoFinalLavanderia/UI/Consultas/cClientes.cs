@@ -11,6 +11,8 @@ namespace ProyectoFinalLavanderia.UI.Consultas
 {
     public partial class cClientes : Form
     {
+        public List<Entidades.Clientes> Lista { get; set; }
+
         public cClientes()
         {
             InitializeComponent();
@@ -30,11 +32,7 @@ namespace ProyectoFinalLavanderia.UI.Consultas
             FiltrarcomboBox.Items.Insert(4, "Telefono");
             FiltrarcomboBox.Items.Insert(5, "Fecha");
             FiltrarcomboBox.DataSource = FiltrarcomboBox.Items;
-            FiltrarcomboBox.DisplayMember = "Todos";
-            //if (FiltrarcomboBox.Items.Count >= 1)
-            //{
-            //    FiltrarcomboBox.SelectedIndex = -1;
-            //}
+            FiltrarcomboBox.DisplayMember = "Todos";            
         }
 
         public bool Validar()
@@ -163,7 +161,11 @@ namespace ProyectoFinalLavanderia.UI.Consultas
 
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
+            var reporte = new Reportes.rpClientes();
+            reporte.Show();
 
+            //new UI.Reportes.rpClientes(Lista).Show();
+            //new UI.Reportes.rpClientes(Lista).Activate();
         }
     }
 }

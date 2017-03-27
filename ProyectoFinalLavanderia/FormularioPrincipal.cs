@@ -69,9 +69,16 @@ namespace ProyectoFinalLavanderia
             rf.Show();  
         }
 
+        private void consultasFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Consultas.cFacturas cf = new UI.Consultas.cFacturas();
+            cf.Show();
+        }
+
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
     }
 }

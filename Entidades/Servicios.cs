@@ -13,12 +13,7 @@ namespace Entidades
         public string Descripcion { get; set; }
         public decimal Costo { get; set; }
 
-        public virtual ICollection<FacturasServicios> ServiciosDetalle { get; set; }        
-
-        public Servicios()
-        {
-            this.ServiciosDetalle = new HashSet<FacturasServicios>();
-        }        
+        public virtual ICollection<FacturasServicios> ServiciosDetalle { get; set; }
 
         public Servicios(int servicioId, string descripcion, decimal costo)
         {
@@ -26,6 +21,11 @@ namespace Entidades
             this.Descripcion = descripcion;
             this.Costo = costo;
         }
+
+        public Servicios()
+        {
+            this.ServiciosDetalle = new HashSet<FacturasServicios>();
+        }        
 
         public override string ToString()
         {
