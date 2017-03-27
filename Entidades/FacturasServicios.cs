@@ -17,7 +17,7 @@ namespace Entidades
         public decimal Costo { get; set; }
 
         public Servicios Servicio { get; set; }
-        //public virtual Facturas Cotizaciones { get; set; } //Uno
+        //public virtual Facturas Facturas { get; set; } //Uno
 
         public FacturasServicios()
         {

@@ -40,9 +40,11 @@
             this.rsgistrosUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consutasClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasServiciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultasFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +57,7 @@
             this.consultasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(686, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1111, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,7 +72,7 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(113, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -137,6 +139,13 @@
             this.consutasClientesToolStripMenuItem.Text = "Consultas &Clientes";
             this.consutasClientesToolStripMenuItem.Click += new System.EventHandler(this.consultasClientesToolStripMenuItem_Click);
             // 
+            // consultasFacturasToolStripMenuItem
+            // 
+            this.consultasFacturasToolStripMenuItem.Name = "consultasFacturasToolStripMenuItem";
+            this.consultasFacturasToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.consultasFacturasToolStripMenuItem.Text = "Consultas &Facturas";
+            this.consultasFacturasToolStripMenuItem.Click += new System.EventHandler(this.consultasFacturasToolStripMenuItem_Click);
+            // 
             // consultasServiciosToolStripMenuItem
             // 
             this.consultasServiciosToolStripMenuItem.Name = "consultasServiciosToolStripMenuItem";
@@ -151,19 +160,38 @@
             this.consultasUsuariosToolStripMenuItem.Text = "Consultas &Usuarios";
             this.consultasUsuariosToolStripMenuItem.Click += new System.EventHandler(this.consultasUsuariosToolStripMenuItem_Click);
             // 
-            // consultasFacturasToolStripMenuItem
+            // label1
             // 
-            this.consultasFacturasToolStripMenuItem.Name = "consultasFacturasToolStripMenuItem";
-            this.consultasFacturasToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
-            this.consultasFacturasToolStripMenuItem.Text = "Consultas &Facturas";
-            this.consultasFacturasToolStripMenuItem.Click += new System.EventHandler(this.consultasFacturasToolStripMenuItem_Click);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Script MT Bold", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1400, 720);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(617, 146);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Lavanderia";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Script MT Bold", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1380, 900);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(618, 37);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Hecho por: Seatiel Ygnacio Rosario (2014-0597)";
             // 
             // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(686, 397);
+            this.ClientSize = new System.Drawing.Size(1111, 543);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormularioPrincipal";
@@ -192,6 +220,8 @@
         private System.Windows.Forms.ToolStripMenuItem registroDeTiposDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasFacturasToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
