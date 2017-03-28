@@ -107,12 +107,14 @@
             this.registrosServiciosToolStripMenuItem.Name = "registrosServiciosToolStripMenuItem";
             this.registrosServiciosToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
             this.registrosServiciosToolStripMenuItem.Text = "Registros &Servicios";
+            this.registrosServiciosToolStripMenuItem.Click += new System.EventHandler(this.registrosServiciosToolStripMenuItem_Click_1);
             // 
             // registroDeTiposDeUsuariosToolStripMenuItem
             // 
             this.registroDeTiposDeUsuariosToolStripMenuItem.Name = "registroDeTiposDeUsuariosToolStripMenuItem";
             this.registroDeTiposDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
             this.registroDeTiposDeUsuariosToolStripMenuItem.Text = "Registros &Tipos de Usuarios";
+            this.registroDeTiposDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.registroDeTiposDeUsuariosToolStripMenuItem_Click_1);
             // 
             // rsgistrosUsuariosToolStripMenuItem
             // 

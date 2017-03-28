@@ -25,25 +25,13 @@ namespace ProyectoFinalLavanderia
         {
             UI.Registros.rClientes rc = new UI.Registros.rClientes();
             rc.Show();
-        }
-
-        private void registroDeTiposDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            UI.Registros.rTiposUsuarios tu = new UI.Registros.rTiposUsuarios();
-            tu.Show();
-        }
+        }        
 
         private void rsgistrosUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UI.Registros.rUsuarios ru = new UI.Registros.rUsuarios();
             ru.Show();
-        }
-
-        private void registrosServiciosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            UI.Registros.rServicios rs = new UI.Registros.rServicios();
-            rs.Show();
-        }
+        }        
 
         private void consultasClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -80,5 +68,16 @@ namespace ProyectoFinalLavanderia
             this.Close();
         }
 
+        private void registrosServiciosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            UI.Registros.rServicios rs = new UI.Registros.rServicios();
+            rs.Show();
+        }
+
+        private void registroDeTiposDeUsuariosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            UI.Registros.rTiposUsuarios tu = new UI.Registros.rTiposUsuarios();
+            tu.Show();
+        }
     }
 }
