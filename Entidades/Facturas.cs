@@ -23,6 +23,14 @@ namespace Entidades
             this.Detalle = new HashSet<FacturasServicios>();
         }
 
+        public Facturas(int facturaId, DateTime fecha, int clienteId, decimal total)
+        {
+            this.FacturaId = facturaId;
+            this.Fecha = fecha;
+            this.ClienteId = ClienteId;
+            this.Total = total;
+        }
+
         public void AgregarDetalle(Servicios servicio, decimal cantidad)
         {
             this.Detalle.Add(new FacturasServicios(servicio.ServicioId, servicio.Descripcion, cantidad, servicio.Costo));

@@ -63,6 +63,9 @@
     <Compile Include="ClientesBLLTests.cs" />
     <Compile Include="FacturasBLLTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiciosBLLTests.cs" />
+    <Compile Include="TiposusuariosBLLTests.cs" />
+    <Compile Include="UsuariosBLLTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

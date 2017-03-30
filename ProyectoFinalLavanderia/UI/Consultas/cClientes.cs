@@ -72,7 +72,7 @@ namespace ProyectoFinalLavanderia.UI.Consultas
                 }
                 else
                 {
-                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Nombres == FiltrarcomboBox.Text);
+                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Nombres.Contains(FiltrarcomboBox.Text));
                 }                
             }
             else if (FiltrarcomboBox.SelectedIndex == 3)
@@ -83,7 +83,7 @@ namespace ProyectoFinalLavanderia.UI.Consultas
                 }
                 else
                 {
-                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Direccion == FiltrarcomboBox.Text);
+                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Direccion.Contains(FiltrarcomboBox.Text));
                 }                    
             }
             else if (FiltrarcomboBox.SelectedIndex == 4)
@@ -99,7 +99,7 @@ namespace ProyectoFinalLavanderia.UI.Consultas
             }
             else if (FiltrarcomboBox.SelectedIndex == 5)
             {
-                ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.FechaCreacion >= DesdedateTimePicker.Value.Date && c.FechaCreacion <= HastadateTimePicker.Value.Date);
+                ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.FechaCreacion >= DesdedateTimePicker.Value.Date && c.FechaCreacion.Date <= HastadateTimePicker.Value);
             }
         }
 
@@ -128,14 +128,14 @@ namespace ProyectoFinalLavanderia.UI.Consultas
             }
             else if (FiltrarcomboBox.SelectedIndex == 2)
             {
-                ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Nombres == FiltrartextBox.Text);
+                ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Nombres.Contains(FiltrartextBox.Text));
                 FiltrartextBox.Enabled = true;
                 DesdedateTimePicker.Enabled = false;
                 HastadateTimePicker.Enabled = false;
             }
             else if (FiltrarcomboBox.SelectedIndex == 3)
             {
-                ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Direccion == FiltrartextBox.Text);
+                ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.Direccion.Contains(FiltrartextBox.Text));
                 FiltrartextBox.Enabled = true;
                 DesdedateTimePicker.Enabled = false;
                 HastadateTimePicker.Enabled = false;
@@ -154,14 +154,14 @@ namespace ProyectoFinalLavanderia.UI.Consultas
                 FiltrartextBox.Enabled = false;
                 if (DesdedateTimePicker != null)
                 {
-                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.FechaCreacion >= DesdedateTimePicker.Value.Date && c.FechaCreacion <= HastadateTimePicker.Value.Date);
+                    ClientesdataGridView.DataSource = BLL.ClientesBLL.Listar(c => c.FechaCreacion >= DesdedateTimePicker.Value.Date && c.FechaCreacion.Date <= HastadateTimePicker.Value);
                 }
             }
         }
 
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
-            var reporte = new Reportes.rpClientes();
+            var reporte = new Reportes.rpClientes(ClientesdataGridView.DataSource);
             reporte.Show();            
         }
     }

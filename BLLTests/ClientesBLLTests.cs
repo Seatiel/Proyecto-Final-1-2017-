@@ -13,13 +13,13 @@ namespace BLL.Tests
         [TestMethod()]
         public void GuardarTest()
         {
-            Assert.IsTrue(BLL.ClientesBLL.Guardar(new Entidades.Clientes(1,"Seatiel Ygnacio", "S.F.M.", "8092697360", DateTime.Now, "syr970220@gmail.com")));
+            Assert.IsTrue(BLL.ClientesBLL.Guardar(new Entidades.Clientes(2,"Seatiel Ygnacio", "S.F.M.", "8092697360", DateTime.Now, "syr970220@gmail.com")));
         }
 
         [TestMethod()]
         public void MofidicarTest()
         {
-            Assert.IsTrue(BLL.ClientesBLL.Mofidicar(new Entidades.Clientes(1, "Seatiel Ygnacio", "S.F.M.", "8092697360", DateTime.Now, "syr970220@gmail.com")));
+            Assert.IsTrue(BLL.ClientesBLL.Mofidicar(new Entidades.Clientes(2, "Seatiel Ygnacio", "S.F.M.", "8092697360", DateTime.Now, "syr970220@gmail.com")));
         }
 
         [TestMethod()]
@@ -31,7 +31,8 @@ namespace BLL.Tests
         [TestMethod()]
         public void BuscarTest()
         {
-            //Assert.IsNotNull(BLL.ClientesBLL.Buscar(new Entidades.Clientes(), true));
+            int id = 1;
+            Assert.IsNotNull(BLL.ClientesBLL.Buscar(c => c.ClienteId == id));
         }
 
         [TestMethod()]

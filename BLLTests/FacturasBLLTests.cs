@@ -14,38 +14,39 @@ namespace BLL.Tests
         [TestMethod()]
         public void GuardarTest()
         {
-            //Facturas fac = new Facturas();
-            //Assert.IsTrue(BLL.FacturasBLL.Guardar(new Entidades.Facturas()));
+            Assert.IsTrue(BLL.FacturasBLL.Guardar(new Entidades.Facturas(1, DateTime.Now, 1, 1234)));
         }
 
         [TestMethod()]
         public void MofidicarTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(BLL.FacturasBLL.Guardar(new Entidades.Facturas(1, DateTime.Now, 1, 1234)));
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(BLL.FacturasBLL.Guardar(new Entidades.Facturas(1, DateTime.Now, 1, 1234)));
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            int id = 1;
+            Assert.IsNotNull(BLL.FacturasBLL.Buscar(f => f.FacturaId == id));
         }
 
         [TestMethod()]
         public void ListarTest()
         {
-            Assert.Fail();
+            int id = 1;
+            Assert.IsNotNull(BLL.FacturasBLL.Listar(f => f.FacturaId == id));
         }
 
         [TestMethod()]
         public void ListarTodoTest()
         {
-            Assert.Fail();
+            Assert.IsNotNull(BLL.FacturasBLL.ListarTodo());
         }
     }
 }
