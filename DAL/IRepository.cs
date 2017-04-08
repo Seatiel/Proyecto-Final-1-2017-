@@ -9,7 +9,6 @@ namespace DAL
     /// Sera de un tipo Generico TEntity para que acepte cualquier entidad 
     /// Tambien Implementamos IDisposable para poder destruirla
     /// where TEntity:class, finalmente TEntity sera una clase que puede ser null , osea que sea un tipo referencia a final de cuentas.
-
     public interface IRepository<TEntity> : IDisposable where TEntity : class
     {
         bool Guardar(TEntity laEntidad);

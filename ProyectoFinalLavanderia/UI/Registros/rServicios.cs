@@ -12,6 +12,7 @@ namespace ProyectoFinalLavanderia.UI.Registros
 {
     public partial class rServicios : Form
     {
+        Servicios servicio;
         public rServicios()
         {
             InitializeComponent();            
@@ -51,17 +52,24 @@ namespace ProyectoFinalLavanderia.UI.Registros
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
-        {
-            Servicios servicio = null;
-            servicio = LlenarClase();
+        {            
             if (!Validar())
             {
                 MessageBox.Show("Debe de completar los campos");
             }
-            else if (servicio != null)
+            else 
             {
-                BLL.ServiciosBLL.Guardar(servicio);
-                MessageBox.Show("Servicio guardado!");
+                servicio = LlenarClase();
+                if (servicio.ServicioId != 0)
+                {
+                    BLL.ServiciosBLL.Mofidicar(servicio);
+                    MessageBox.Show("Servicio Modificado");                    
+                }
+                else
+                {
+                    BLL.ServiciosBLL.Guardar(servicio);
+                    MessageBox.Show("Servicio guardado!");                    
+                }
                 Limpiar();
             }
         }

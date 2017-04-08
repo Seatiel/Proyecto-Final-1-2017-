@@ -75,7 +75,8 @@ namespace ProyectoFinalLavanderia.UI.Consultas
 
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
-            
+            var reporte = new Reportes.rpUsuarios(UsuariosdataGridView.DataSource);
+            reporte.Show();
         }
     }
 }

@@ -35,12 +35,12 @@ namespace BLL
 
         public static bool Mofidicar(Entidades.Clientes existente)
         {
-            bool eliminado = false;
+            bool modificado = false;
             using (var repositorio = new Repositorio<Entidades.Clientes>())
             {
-                eliminado = repositorio.Modificar(existente);
+                modificado = repositorio.Modificar(existente);
             }
-            return eliminado;
+            return modificado;
         }
 
         public static bool Eliminar(Entidades.Clientes existente)

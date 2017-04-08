@@ -154,6 +154,7 @@
             this.FacturasDetallesdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FacturasDetallesdataGridView.Location = new System.Drawing.Point(9, 106);
             this.FacturasDetallesdataGridView.Name = "FacturasDetallesdataGridView";
+            this.FacturasDetallesdataGridView.ReadOnly = true;
             this.FacturasDetallesdataGridView.RowTemplate.Height = 24;
             this.FacturasDetallesdataGridView.Size = new System.Drawing.Size(984, 157);
             this.FacturasDetallesdataGridView.TabIndex = 8;

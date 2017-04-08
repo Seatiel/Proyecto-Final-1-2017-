@@ -28,7 +28,7 @@ namespace ProyectoFinalLavanderia.UI.Reportes
             ClientesreportViewer.Reset();
             ClientesreportViewer.ProcessingMode = ProcessingMode.Local;
             ClientesreportViewer.LocalReport.ReportPath = @"C:\Users\Seatiel\Dropbox\Proyecto de Aplicada (1-2017)\ProyectoFinalLavanderia\ProyectoFinalLavanderia\UI\Reportes\ClientesReport.rdlc";
-            ReportDataSource source = new ReportDataSource("LavanderiaDataSet", DataSource); ;
+            ReportDataSource source = new ReportDataSource("LavanderiaDataSet", DataSource);
             ClientesreportViewer.LocalReport.DataSources.Add(source);
             this.ClientesreportViewer.RefreshReport();
         }

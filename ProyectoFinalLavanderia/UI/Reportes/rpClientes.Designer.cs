@@ -47,6 +47,7 @@
             this.Controls.Add(this.ClientesreportViewer);
             this.Name = "rpClientes";
             this.Text = "rpClientes";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.rpClientes_Load);
             this.ResumeLayout(false);
 

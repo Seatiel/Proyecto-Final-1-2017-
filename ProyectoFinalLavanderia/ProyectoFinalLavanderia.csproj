@@ -156,6 +156,18 @@
     <Compile Include="UI\Reportes\rpFacturas.Designer.cs">
       <DependentUpon>rpFacturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Reportes\rpServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\rpServicios.Designer.cs">
+      <DependentUpon>rpServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\rpUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\rpUsuarios.Designer.cs">
+      <DependentUpon>rpUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilitarios.cs" />
     <EmbeddedResource Include="FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
@@ -207,6 +219,14 @@
     <EmbeddedResource Include="UI\Reportes\rpFacturas.resx">
       <DependentUpon>rpFacturas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\rpServicios.resx">
+      <DependentUpon>rpServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\rpUsuarios.resx">
+      <DependentUpon>rpUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\ServiciosReport.rdlc" />
+    <EmbeddedResource Include="UI\Reportes\UsuariosReport.rdlc" />
     <None Include="App.config" />
     <None Include="UI\Reportes\LavanderiaDbDataSet.xsc">
       <DependentUpon>LavanderiaDbDataSet.xsd</DependentUpon>

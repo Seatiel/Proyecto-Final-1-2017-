@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.FiltrartextBox = new System.Windows.Forms.TextBox();
             this.ValidarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Imprimirbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ServiciosdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -95,11 +96,26 @@
             // 
             this.ValidarerrorProvider.ContainerControl = this;
             // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Imprimirbutton.Image = ((System.Drawing.Image)(resources.GetObject("Imprimirbutton.Image")));
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Imprimirbutton.Location = new System.Drawing.Point(15, 349);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(117, 40);
+            this.Imprimirbutton.TabIndex = 16;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
+            // 
             // cServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 370);
+            this.ClientSize = new System.Drawing.Size(745, 401);
+            this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.ServiciosdataGridView);
             this.Controls.Add(this.FiltrarcomboBox);
             this.Controls.Add(this.Buscarbutton);
@@ -121,5 +137,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox FiltrartextBox;
         private System.Windows.Forms.ErrorProvider ValidarerrorProvider;
+        private System.Windows.Forms.Button Imprimirbutton;
     }
 }

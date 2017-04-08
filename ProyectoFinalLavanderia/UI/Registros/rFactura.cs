@@ -97,7 +97,7 @@ namespace ProyectoFinalLavanderia.UI.Registros
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            int id = 0;            
+            //int id = 0;            
             factura = LlenarClase();
             if (!Validar())
             {
@@ -105,12 +105,12 @@ namespace ProyectoFinalLavanderia.UI.Registros
             }
             else
             {
-                if (id != factura.FacturaId)
+                if (factura.FacturaId  != 0)
                 {
                     BLL.FacturasBLL.Mofidicar(factura);
                     MessageBox.Show("La Factura se ha Modifico.");
                 }
-                else if (factura != null)
+                else
                 {
                     BLL.FacturasBLL.Guardar(factura);
                     MessageBox.Show("La Factura se ha Guardo.");                    

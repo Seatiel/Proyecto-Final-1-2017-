@@ -12,6 +12,7 @@ namespace ProyectoFinalLavanderia.UI.Registros
 {
     public partial class rUsuarios : Form
     {
+        Usuarios usuario;
         public rUsuarios()
         {
             InitializeComponent();
@@ -155,8 +156,7 @@ namespace ProyectoFinalLavanderia.UI.Registros
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
-        {
-            Usuarios usuario = null;            
+        {          
             if (!Validar())
             {
                 MessageBox.Show("Debe de completar los campos");

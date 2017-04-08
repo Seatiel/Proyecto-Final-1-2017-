@@ -12,6 +12,7 @@ namespace ProyectoFinalLavanderia.UI.Registros
 {
     public partial class rTiposUsuarios : Form
     {
+        TiposUsuarios tipoUsuario;
         public rTiposUsuarios()
         {
             InitializeComponent();
@@ -48,17 +49,25 @@ namespace ProyectoFinalLavanderia.UI.Registros
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
-        {
-            TiposUsuarios tipoUsuario = null;
-            tipoUsuario = LlenarClase();
+        {            
+            
             if (!Validar())
             {
                 MessageBox.Show("Debe de completar los campos");
             }
-            else if (tipoUsuario != null)
+            else 
             {
-                BLL.TiposusuariosBLL.Guardar(tipoUsuario);
-                MessageBox.Show("Tipo de Usuario guardado!");
+                tipoUsuario = LlenarClase();
+                if (tipoUsuario.TipoUsuarioId != 0)
+                {
+                    BLL.TiposusuariosBLL.Mofidicar(tipoUsuario);
+                    MessageBox.Show("Tipo de Usuario Modificado!");                    
+                }
+                else
+                {
+                    BLL.TiposusuariosBLL.Guardar(tipoUsuario);
+                    MessageBox.Show("Tipo de Usuario guardado!");                    
+                }
                 Limpiar();
             }
         }

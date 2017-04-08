@@ -98,7 +98,7 @@ namespace ProyectoFinalLavanderia.UI.Consultas
 
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
-            var reporte = new Reportes.rpFacturas();
+            var reporte = new Reportes.rpFacturas(FacturasdataGridView.DataSource);
             reporte.Show();
         }
     }

@@ -12,8 +12,11 @@ namespace ProyectoFinalLavanderia.UI.Reportes
 {
     public partial class rpFacturas : Form
     {
-        public rpFacturas()
+        object DataSource;
+
+        public rpFacturas(object dataSource)
         {
+            this.DataSource = dataSource;
             InitializeComponent();
         }
 
@@ -23,7 +26,7 @@ namespace ProyectoFinalLavanderia.UI.Reportes
             FacturasreportViewer.Reset();
             FacturasreportViewer.ProcessingMode = ProcessingMode.Local;
             FacturasreportViewer.LocalReport.ReportPath = @"C:\Users\Seatiel\Dropbox\Proyecto de Aplicada (1-2017)\ProyectoFinalLavanderia\ProyectoFinalLavanderia\UI\Reportes\FacturasReport.rdlc";
-            ReportDataSource source = new ReportDataSource("LavanderiaDataSet", BLL.FacturasBLL.Listar(c=> c.FacturaId == 1));
+            ReportDataSource source = new ReportDataSource("LavanderiaDataSet", DataSource);
             FacturasreportViewer.LocalReport.DataSources.Add(source);
             this.FacturasreportViewer.RefreshReport();
         }

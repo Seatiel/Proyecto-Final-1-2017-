@@ -420,9 +420,9 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>LavanderiaDataSet</DataSetName>
-            <Top>1.05833cm</Top>
-            <Height>1.62333cm</Height>
-            <Width>19.6177cm</Width>
+            <Top>0.8255cm</Top>
+            <Height>1.62334cm</Height>
+            <Width>19.61771cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -431,10 +431,10 @@
           </Tablix>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>1.3735cm</Top>
+        <Top>1.60633cm</Top>
         <Left>0.42333cm</Left>
-        <Height>4.76483cm</Height>
-        <Width>19.6177cm</Width>
+        <Height>3.4525cm</Height>
+        <Width>19.61771cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
